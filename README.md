@@ -12,7 +12,7 @@
 
    ![Gambar Download ZIP](#)
 
-   - Pilih lokasi penyimpanan yang diinginkan untuk file ZIP ini.
+   - Pilih lokasi penyimpanan yang diinginkan untuk file ZIP ini, lalu mulai download.
 
    ![Gambar Pilih Lokasi](#)
 
