@@ -892,7 +892,6 @@ input.image-count {
 
 
 .close_pras {
-  margin-top: -350px;
   position: absolute;
   left: 20px;
   width: 4em;
@@ -963,9 +962,22 @@ body.no-scroll {
   justify-content: center;
 }
 
-@media (max-width: 477px) {
+@media (max-width: 980px) {
   .main_prasmanan {
     display: block;
+  }
+  .sambal{
+    justify-content: center;
+  }
+  .lalapan{
+    justify-content: center;
+  }
+  .mid_content{
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+  .close_pras{
+    margin: 0;
   }
 }
 
@@ -1009,8 +1021,7 @@ body.no-scroll {
   height: 280px;
   background-color: #f8b400;
   border-radius: 20px;
-  display: flex;
-  justify-content: center;
+  align-self: center;
   align-items: center;
   text-align: center;
   font-weight: bold;
@@ -1122,6 +1133,7 @@ body.no-scroll {
 
 .menu_pras1 .nasi {
   display: flex;
+  justify-content: center;
 }
 
 .menu_pras1 .nasi1 {
