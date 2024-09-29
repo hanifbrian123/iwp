@@ -1,0 +1,7 @@
+Background1.jpg = https://www.ckphospitality.com/project/the-four-seasons-resort-bali/jimbaran-dining/
+background2.jpg = https://www.kompas.com/food/read/2021/11/01/121658475/12-makanan-di-pesta-pernikahan-yang-selalu-jadi-incaran
+catering =
+event.jpeg = https://jateng.idntimes.com/food/recipe/gebialya-rahmani-1/resep-nasi-kuning-tumpeng-khas-jawa-untuk-acara-spesial-c1c2
+facstdelivery.jpg = https://money.kompas.com/read/2022/05/21/110636326/simak-syarat-dan-cara-daftar-online-shopee-food-merchant
+restraurant.jpg = https://www.antaranews.com/berita/3836022/gemar-nongkrong-picu-masyarakat-indonesia-memilih-makan-di-restoran
+tumpeng.png = https://bumimin.com/product/tumpeng-30-porsi-tampah/ 
