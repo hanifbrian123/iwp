@@ -2129,5 +2129,19 @@ body.no-scroll {
   object-fit: cover;
   width: 50px;
   height: 50px;
+}
 
+.info_harga_pras {
+  align-self: center;
+  position: absolute;
+  width: 70px;
+  background-color: yellow;
+  color: red;
+  font-size: 12px;
+  font-weight: bold;
+  border: 2px solid #000;
+  border-radius: 5px;
+  display: block;
+  z-index: 1;
+  margin-top: 75px;
 }
