@@ -106,6 +106,7 @@
   /*---------Feature----------*/
   /*---------Feature----------*/
   /*---------Feature----------*/
+  
   .header-content{
     display: flex;
     justify-content: space-between;
@@ -138,23 +139,19 @@
     color: #fff;
     font-family: Arial, sans-serif;
 }
-
 h5 {
     color: #FFCC00;
     margin-bottom: 20px;
 }
-.form{
+.form-section {
+  border: 1px solid #FFCC00;
   border-radius: 30px;
   background-color: black;
+  padding: 20px;
+  margin-top: 100px;
+  width: 900px;
   animation: teksAnimation 1s ease forwards;
-}
-.form-section {
-    border: 1px solid #FFCC00;
-    border-radius: 30px;
-    padding: 20px;
-    margin-bottom: 20px;
-    width: 500px;
-    
+  
 }
 
 .form-control {
@@ -178,6 +175,7 @@ h5 {
   width: 100%;
   height: 50vh;
   background-color: black;
+  margin-bottom: 50px;
 }
   @keyframes teksAnimation {
     0% {
@@ -236,7 +234,7 @@ h5 {
   
   /* RESPONSIVE */
   
-  @media (max-width: 576px) {
+  @media (max-width: 980px) {
     .navigation {
       flex-direction: column;
       align-items: flex-start;
@@ -272,5 +270,21 @@ h5 {
     .header-content{
       display: contents;
 
+    }
+    .form-section{
+      width: 700px;
+      margin-left: 60px;
+    }
+    .form-section h3{
+      text-align: center;
+    }
+    header{
+      height: 100vh;
+    }
+    .hitam{
+      display: none;
+    }
+    .tulisan {
+      text-align: center;
     }
   }
