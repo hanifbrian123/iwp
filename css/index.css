@@ -1,0 +1,326 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Fjalla One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+body {
+  background: black;
+  background-size: cover;
+  color: #fff;
+}
+header{
+  width: 100%;
+  height: 100vh;
+  background-image: url(../img/background.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 10px 8%;
+  position: relative;
+}
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+.navigation {
+  opacity: 0; /* Mulai dengan tidak terlihat */
+  transform: translateY(20px); /* Mulai sedikit turun */
+  animation: navAnimation 1s ease forwards;
+}
+.navigation .navbar-toggler {
+  border: none;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  gap: 12px;
+  background: transparent;
+  border: solid white;
+  cursor: pointer;
+  transition: all 450ms ease-in-out;
+}
+.navigation .navbar-toggler:hover {
+  background: linear-gradient(0deg,#ffa52fb0,#ffca6fc5);
+  box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4),
+  inset 0px -4px 0px 0px rgba(0, 0, 0, 0.2),
+  0px 0px 0px 4px rgba(255, 255, 255, 0.2),
+  0px 0px 180px 0px #9917FF;
+  transform: translateY(-2px);
+  border: none;
+}
+.navigation .btn { 
+  font-size: 16px;
+  font-weight: 300;
+  text-transform: uppercase;
+  line-height: 8px;
+  border: 2px solid white;
+  border-radius: 10px;
+  background: transparent;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.navbar-nav {
+  height: 78vh;
+}
+.btn > * {
+  display: inline-block;
+  transition: all ease-in-out .5s;
+}
+
+.btn__visible {
+  padding: 15px 3rem;
+  text-align: center;
+}
+
+.btn__invisible {
+  width: 100%;
+  position: absolute;
+  padding: 1.2rem 0;
+  left: 0;
+  top: -100%;
+}
+
+.navigation .btn:hover {
+  background-image: linear-gradient(160deg, #FFA62F 0%, #FFC96F 100%);
+}
+
+.btn:hover .btn__visible {
+  transform: translateY(100%);
+}
+
+.btn:hover .btn__invisible {
+  top: 0;
+}
+
+.btn:focus {
+  outline: none;
+}
+/*---------Feature----------*/
+/*---------Feature----------*/
+/*---------Feature----------*/
+/*---------Feature----------*/
+/*---------Feature----------*/
+.fixed-footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: transparent;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 1rem;
+  z-index: 999;
+}
+
+.fixed-footer p {
+  margin: 0;
+  font-family: "Poppins", sans-serif;;
+}
+
+.carde {
+  width: 100%;
+  height: 75vh;
+  border-radius: 4px;
+  display: flex;
+  gap: 5px;
+  padding: .4em;
+}
+
+.carde p {
+  height: 100%;
+  flex: 1;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all .5s;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0; /* Mulai dengan tidak terlihat */
+  transform: translateY(20px); /* Mulai sedikit turun */
+  animation: cardAnimation 1s ease forwards;
+}
+
+.carde p:hover {
+  flex: 4;
+}
+
+.carde p span {
+  min-width: 14em;
+  padding: .5em;
+  text-align: center;
+  transition: all .5s;
+  font-size: 25px;
+  text-transform: uppercase;
+  color: #ffffff;
+  letter-spacing: .1em;
+  text-shadow: 50px 50px 50px rgba(0, 0, 0, 0.9); 
+
+  transition: 0.6s;
+}
+
+.carde p:hover span {
+  transform: translateY(100%);
+  width: 120vh;
+  background-color: black;
+  margin-top: 300px;
+  transition: 0.6s;
+}
+.carde .restaurant {
+  background-image: url('../img/restaurant.jpg');
+  background-size: cover;
+  background-position: center; 
+  animation-delay: 0.5s;
+}
+
+.carde .event {
+  background-image: url('../img/fastdelivery.jpg');
+  background-size: cover;
+  background-position: top;
+  animation-delay: 0.7s;
+}
+
+.carde .catering {
+  background-image: url('../img/catering.jpg');
+  background-size: cover;
+  background-position: center;
+  animation-delay: 0.9s;
+}
+
+.carde .restaurant:hover {
+  background-image: url('../img/restauranthover.jpg');
+}
+
+.carde .event:hover {
+  background-image: url('../img/fastdeliveryhover.jpg');
+}
+
+.carde .catering:hover {
+  background-image: url('../img/cateringhover.jpg');
+}
+/* POP UP MODAL */
+.reserver {
+  height: 50px;
+}
+.modal-content {
+  height: 80vh;
+}
+.modal-body {
+  background-color: gray;
+}
+.esvege {
+  margin-left: 80px;
+}
+
+
+/* ANIMASI CARD */
+@keyframes cardAnimation {
+  0% {
+      opacity: 0;
+      transform: translateY(20px); /* Mulai sedikit turun */
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0); /* Berakhir di posisi normal */
+  }
+}
+
+@keyframes textAnimation {
+  0% {
+      opacity: 0;
+      transform: translateX(-20px); /* Mulai sedikit keluar dari kiri */
+  }
+  100% {
+      opacity: 1;
+      transform: translateX(0); /* Berakhir di posisi normal */
+  }
+}
+
+/* ANIMASI NAVBAR */
+
+@keyframes navAnimation {
+  0% {
+      opacity: 0;
+      transform: translateY(-80px); /* Mulai sedikit turun */
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0); /* Berakhir di posisi normal */
+  }
+}
+
+/* ANIMASI LOADING */
+#loading-animation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 10000;
+  display: none; /* Mulai dengan tidak terlihat */
+}
+
+.spinner {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 576px) {
+  .navigation {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navigation h3 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .navigation div {
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+  }
+
+  .btn.mb-2 {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .navigation .btn {
+    margin-left: 20px;
+    margin-right: -10px;
+  }
+  .navbar-toggler {
+    display: none;
+
+  }
+  .carde p span {
+    transform: rotate(90deg);
+  }
+}
