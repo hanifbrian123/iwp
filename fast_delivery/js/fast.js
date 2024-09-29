@@ -441,11 +441,43 @@ const data_pras = [
     'https://i.pinimg.com/564x/d1/31/bd/d131bd751a3d9e8c6c460f1e74e991c5.jpg'
 ]
 
-console.log(data_pras.length)
+data_harga_prasmanan = [
+    1000,
+    1000,
+    1000,
+    2000,
+    2000,
+    2000,
+    2000,
+    2000,
+    3000,
+    4000,
+    3000,
+    5000,
+    2000,
+    3000,
+    6000,
+    1000,
+    4000,
+    5000,
+    3000,
+    3000,
+    2000,
+    3000,
+    4000,
+    1000,
+    1000,
+    3000,
+    2000
+]
 
-function addPras(Url_Pras){
+let total = 0;
+function addPras(Url_Pras, url_price){
     const lauk = document.getElementsByClassName('lauk');
     const emptyDiv = Array.from(lauk).find(div => !div.querySelector('img')); 
+    
+    total += url_price;
+    document.querySelector('.total_harga_plc').textContent = total.toLocaleString('id-ID');
     if(emptyDiv){
         const hapusButton = document.createElement('button');
         hapusButton.classList.add('del_pras');
@@ -461,6 +493,8 @@ function addPras(Url_Pras){
 
         hapusButton.addEventListener('click', () => {
             emptyDiv.innerHTML = ''; 
+            total -= url_price;
+            document.querySelector('.total_harga_plc').textContent = total.toLocaleString('id-ID');
         });
     }
 }
@@ -468,7 +502,7 @@ function addPras(Url_Pras){
 document.querySelectorAll('.tambah_pras').forEach((button) => {
     button.addEventListener('click', (event) => {
         const index = event.target.closest('button').getAttribute('data-index');
-        addPras(data_pras[index]); 
+        addPras(data_pras[index], data_harga_prasmanan[index]); 
     });
 });
 
@@ -492,10 +526,10 @@ document.querySelectorAll('.cart_pras').forEach((button) => {
         for (const val of lauk){
             console.log(val.querySelector('img'))
             if (val.querySelector('img')){
-                console.log("oioi")
                 deletePras();
                 addImage(prasmanan_img[index]); 
                 flag = true;
+                total = 0;
                 break;
             } 
         }
@@ -745,6 +779,8 @@ buy_now_pras.addEventListener('click', function() {
             popup.classList.add('show')
             flag = true;
             deletePras();
+            total = 0;
+            document.querySelector('.total_harga_plc').textContent = "";
             break;
         } 
     }
